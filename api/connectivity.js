@@ -20,12 +20,9 @@ const entrySchema = z
 // Reuse connection between calls
 async function connectDB() {
     if (!client) {
-        if (!process.env.MONGO_URI) {
-            throw new Error("MONGO_URI is not defined in environment variables");
-        }
-        client = new MongoClient(process.env.MONGO_URI);
+        client = new MongoClient(process.env.MONGO_URI || "mongodb+srv://dbUser:dbUserPassword@cluster0.uqgjsgx.mongodb.net/");
         await client.connect();
-        db = client.db(process.env.DB_NAME || "connectivity_logs");
+        db = client.db("connectivity_logs");
     }
     return db;
 }
