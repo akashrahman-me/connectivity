@@ -1,0 +1,20 @@
+{
+    "name": "internet-connectivity",
+    "version": "1.0.0",
+    "description": "Internet Connectivity Logger API",
+    "type": "module",
+    "scripts": {
+        "dev": "node --watch server.js",
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "mongodb": "^6.0.0",
+        "zod": "^4.3.5"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
